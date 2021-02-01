@@ -7,7 +7,6 @@ public class Carro_Problema1 {
 	private String modelo;
 	private Calendar entrada, saida;
 	private Pagamento_Problema1 pagamento = new Pagamento_Problema1();
-	private boolean impressao;
 	private SimpleDateFormat date_format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 	
 	
@@ -44,10 +43,10 @@ public class Carro_Problema1 {
 		
 		if(permanencia >= diaria) {
 			if( (permanencia % diaria) == 0) {
-				return pagamento.geraPagamentoDiaria( permanencia/diaria );
+				return pagamento.geraPagamentoDiaria( permanencia/24 );
 			}
 			else {
-				return pagamento.geraPagamentoDiaria( (int) (permanencia/diaria)+1 );
+				return pagamento.geraPagamentoDiaria( (int) (permanencia/24)+1 );
 			}
 		}else {
 			if(permanencia >= hora) {
