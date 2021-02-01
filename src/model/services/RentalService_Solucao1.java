@@ -6,9 +6,9 @@ import model.entities.Invoice_Solucao1;
 public class RentalService_Solucao1 {
 	
 	private Double pricePerDay, pricePerHour;
-	private BrasilTaxServices_Solucao1 taxService;
+	private TaxServices_Solucao1 taxService;
 
-	public RentalService_Solucao1(Double pricePerDay, Double pricePerHour, BrasilTaxServices_Solucao1 taxService) {
+	public RentalService_Solucao1(Double pricePerDay, Double pricePerHour, TaxServices_Solucao1 taxService) {
 		this.pricePerDay = pricePerDay;
 		this.pricePerHour = pricePerHour;
 		this.taxService = taxService;
